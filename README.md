@@ -38,10 +38,22 @@ It takes a word as the first argument and then an array of valid substrings (fro
 
 ### Bubble Sort
 
-It takes a word as the first argument and then an array of valid substrings (from dictionary) as the second argument. It returns a hash listing each substring (case insensitive) that was found in the original string and how many times it was found.
+#### bubble_sort
+
+It takes an array and returns a sorted array. It use the bubble sort methodology without using the Array.sort method.
 
 ```ruby
-  > dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-  > substrings("Howdy partner, sit down! How's it going?", dictionary)
-  => { "down" => 1, "how" => 2, "howdy" => 1,"go" => 1, "going" => 1, "it" => 2, "i" => 3, "own" => 1,"part" => 1,"partner" => 1,"sit" => 1 }
+  > bubble_sort([4,3,78,2,0,2])
+  => [0,2,2,3,4,78]
+```
+
+#### bubble_sort_by
+
+A similar to bubble_sort method which sorts an array by accepting a block.
+
+```ruby
+  > bubble_sort_by(["hi","hello","hey"]) do |left,right|
+  >   left.length <=> right.length
+  > end
+  => ["hi", "hey", "hello"]
 ```

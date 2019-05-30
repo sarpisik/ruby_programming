@@ -1,10 +1,10 @@
-### RUBY PROGRAMMING EXERCISES
+# RUBY PROGRAMMING EXERCISES
 
 My ruby programming projects from The Odin Project's [curriculum](https://www.theodinproject.com/courses/ruby-programming)
 
 ## Basic Ruby Projects
 
-# Caesar Cipher
+### Caesar Cipher
 
 From Wikipedia:
 
@@ -17,7 +17,7 @@ Simple, it takes in a string and the shift factor and then outputs the modified 
   => "Bmfy f xywnsl!"
 ```
 
-# Stock Picker
+### Stock Picker
 
 It takes in an array of stock prices, one for each hypothetical day. It returns a pair of days representing the best day to buy and the best day to sell.
 
@@ -26,7 +26,7 @@ It takes in an array of stock prices, one for each hypothetical day. It returns 
   => [1,4]  # for a profit of $15 - $3 == $12
 ```
 
-# Substrings
+### Substrings
 
 It takes a word as the first argument and then an array of valid substrings (from dictionary) as the second argument. It returns a hash listing each substring (case insensitive) that was found in the original string and how many times it was found.
 

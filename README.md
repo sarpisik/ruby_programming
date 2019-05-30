@@ -25,3 +25,13 @@ It takes in an array of stock prices, one for each hypothetical day. It returns 
   > stock_picker([17,3,6,9,15,8,6,1,10])
   => [1,4]  # for a profit of $15 - $3 == $12
 ```
+
+# Substrings
+
+It takes a word as the first argument and then an array of valid substrings (from dictionary) as the second argument. It returns a hash listing each substring (case insensitive) that was found in the original string and how many times it was found.
+
+```ruby
+  > dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+  > substrings("Howdy partner, sit down! How's it going?", dictionary)
+  => { "down" => 1, "how" => 2, "howdy" => 1,"go" => 1, "going" => 1, "it" => 2, "i" => 3, "own" => 1,"part" => 1,"partner" => 1,"sit" => 1 }
+```

@@ -57,3 +57,19 @@ A similar to bubble_sort method which sorts an array by accepting a block.
   > end
   => ["hi", "hey", "hello"]
 ```
+
+### Enumerable Methods
+
+Custom methods in Enumerable module.
+
+```ruby
+  > module Enumerable
+  >   def my_each
+  >     i = 0
+  >     while self[i]
+  >       yield(self[i])
+  >       i += 1
+  >     end
+  >   end
+  > end
+```

@@ -64,8 +64,25 @@ class Game
     general_combinations = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 4, 7, 2, 5, 8, 3, 6, 9, 1, 5, 9, 3, 5, 7]
     @winning_combinations = general_combinations.each_slice(3).to_a
     @screen = Screen.new
-
+    display_instructions
     initialize_game
+  end
+
+  def display_instructions
+    puts "\n"
+    puts '*************************************************'
+    puts '******** Welcome To My Tic-Tac-Toe Game! ********'
+    puts '*************************************************'
+    puts '================================================='
+    puts '********************* RULES *********************'
+    puts 'Two players will take turns to mark the spaces on'
+    puts 'a 3x3 grid. The player who succeeds in placing 3 '
+    puts 'of their marks in a horizontal, vertical, or     '
+    puts 'diagonal row wins the game. When there are no    '
+    puts 'more spaces left to mark, it is consider a draw. '
+    puts 'To place a mark on the grid, type the number on  '
+    puts 'the space you would like to mark! As shown below.'
+    puts "Good luck! \n "
   end
 
   def initialize_game
@@ -135,7 +152,7 @@ class Game
   end
 
   def update_memory
-    # Save current player's box selection
+    # Save current player's move
     @memory[@current_player.box] = @current_player.mark
   end
 
@@ -149,7 +166,7 @@ class Game
 
   def draw?
     unless @memory.any? { |_key, value| value.is_a? Integer }
-      print_text('It is a draw!')
+      draw_text
       true
     end
     false
@@ -159,16 +176,34 @@ class Game
     game_end = false
     @winning_combinations.each do |combination|
       if combination.all? { |box| @memory[box] == @player1.mark }
-        print_text("#{@player1.name} Win!")
+        winner_text(@player1.name)
         game_end = true
       elsif combination.all? { |box| @memory[box] == @player2.mark }
-        print_text("#{@player2.name} Win!")
+        winner_text(@player2.name)
         game_end = true
       else
         game_end
       end
     end
     game_end
+  end
+
+  def winner_text(name)
+    puts "\n"
+    puts '*************************************************'
+    puts '**************** CONGRATULATIONS ****************'
+    puts '*************************************************'
+    puts "**************** #{name} Wins! *****************"
+    puts '*************************************************'
+  end
+
+  def draw_text
+    puts "\n"
+    puts '*************************************************'
+    puts '****************    GAME OVER    ****************'
+    puts '*************************************************'
+    puts "****************  It's a Draw!  *****************"
+    puts '*************************************************'
   end
 
   def ask_new_game
@@ -178,7 +213,7 @@ class Game
       answer = gets.chomp.downcase
       break if answer == 'y' || answer == 'n'
     end
-    answer == 'y' && initialize_game
+    answer == 'y' ? initialize_game : print_text('Thanks for playing!')
   end
 
   def print_text(text)

@@ -161,7 +161,7 @@ class Game
   end
 
   def game_end?
-    draw? || player_won?
+    player_won? || draw?
   end
 
   def draw?

@@ -73,3 +73,14 @@ Custom methods in Enumerable module.
   >   end
   > end
 ```
+
+## Intermediate Ruby Projects
+
+Object Oriented Programming Projects:
+
+### Tic Tac Toe
+
+A command line version of tic tac toe game. It involves a couple of players, a simple board, checking for victory in a game loop…
+See [Wikipedia](http://en.wikipedia.org/wiki/Tic-tac-toe) if you can’t remember the rules, or if you haven’t ever played.
+
+[Click here to play](https://repl.it/@sarpisik/Tic-Tac-Toe-Game)

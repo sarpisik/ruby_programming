@@ -84,3 +84,9 @@ A command line version of tic tac toe game. It involves a couple of players, a s
 See [Wikipedia](http://en.wikipedia.org/wiki/Tic-tac-toe) if you can’t remember the rules, or if you haven’t ever played.
 
 [Click here to play](https://repl.it/@sarpisik/Tic-Tac-Toe-Game)
+
+### Mastermind Game
+
+Mastermind is a game where you have to guess your opponent’s secret code within a certain number of turns, check it out on [Wikipedia](<https://en.wikipedia.org/wiki/Mastermind_(board_game)>). Each turn you get some feedback about how good your guess was – whether it was exactly correct or just the correct color but in the wrong space.
+
+[Click here to play](https://repl.it/@sarpisik/Mastermind-Game)
